@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50041
 File Encoding         : 65001
 
-Date: 2016-09-05 00:05:34
+Date: 2016-09-12 22:38:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,12 +25,12 @@ CREATE TABLE `bonus` (
   `COMM` decimal(7,2) NOT NULL COMMENT '雇员奖金',
   `PAYTIME` date NOT NULL COMMENT '支付时间',
   PRIMARY KEY  (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bonus
 -- ----------------------------
-INSERT INTO `bonus` VALUES ('1', '7839', '10000.00', '5000.00', '2016-09-12');
+INSERT INTO `bonus` VALUES ('2', '7933', '10000.00', '200.00', '2016-09-07');
 
 -- ----------------------------
 -- Table structure for `dept`
@@ -41,7 +41,7 @@ CREATE TABLE `dept` (
   `DNAME` varchar(14) NOT NULL COMMENT '部门名称',
   `LOC` varchar(13) NOT NULL COMMENT '部门所在位置',
   PRIMARY KEY  (`DEPTNO`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dept
@@ -63,7 +63,7 @@ CREATE TABLE `emp` (
   `HIREDATE` date default NULL COMMENT '雇佣日期',
   `DEPTNO` int(4) default NULL COMMENT '所在部门编号',
   PRIMARY KEY  (`EMPNO`)
-) ENGINE=MyISAM AUTO_INCREMENT=7935 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of emp
@@ -90,7 +90,7 @@ CREATE TABLE `salgrade` (
   `LOSAL` int(11) NOT NULL COMMENT '最低工资',
   `HISAL` int(11) NOT NULL COMMENT '最高工资',
   PRIMARY KEY  (`GRADE`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of salgrade
